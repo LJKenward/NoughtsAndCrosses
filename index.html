@@ -3,27 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <title>Tic Tac Toe</title>
-  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
-        <style>
-            .Square {
-              width: 40px;
-              height: 40px;
-              text-align: center;
-              font-size: 18pt;
-              font-weight: bold;
-              font-family: Verdana;
-           }
-        </style>
-
-        
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
 </head>
 <body onload="startGame();">
-  <h1>Welcome to my awesome Tic Tac Toe Game</h1>
+  <header>
+  </header>
+<div class="grid"> <!--100% wide-->
+  
+  <div class="col-1-3">
+     
+     <img id="logo" src="images/noughtsandcrosses.gif">
 
-  <div id="message">Messages Will Go Here</div>
+     <div id="message">Messages Will Go Here</div>
+     
+  </div>
+
+  <div class="col-2-3">
+     
+      <div class="gameBoard">
+        
     
-    <table border="1">
+    <table id="tableBoard">
       <tr>
         <td id="s1" class="Square" onclick="nextMove(this)"></td>
         <td id="s2"  class="Square" onclick="nextMove(this)"></td>
@@ -41,6 +43,16 @@
       </tr>
     </table>
     <a href="javascript:startGame();">Start Over</a>
+      </div>
+  </div>
+</div>
+
+
+
+
+  
+
+  
 
 <script type="text/javascript" src="app.js"></script>
 </body>
