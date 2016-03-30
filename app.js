@@ -12,6 +12,10 @@ function startGame() {
           }
           document.winner = null;
           setMessage(document.turn + " gets to start.");
+
+          // Start Again Click Link
+          var startAgain = document.getElementById('startAgain');
+          startAgain.onclick = startGame();
         }
 
         function setMessage(msg) {
@@ -34,6 +38,8 @@ function startGame() {
           if(checkForWinner(document.turn)) {
             setMessage("Congratulatons " + document.turn + "! You win!");
             document.winner = document.turn;
+          } else if (checkForTie()) {
+            setMessage("It's a Tie! Click Start Again To Play Again!");
           } else if (document.turn == "X") {
             document.turn = "O";
             setMessage("It's " + document.turn + "'s turn!");
@@ -61,6 +67,20 @@ function startGame() {
           return result;
         }
 
+
+function checkForTie()
+        {
+            for(var i=1;i<10;i++)
+            {
+
+              if(getBox(i)=="")
+               return false;
+            }
+            return true;
+        }
+
+
+
         function checkRow(a, b, c, move) {
           var result = false;
           if (getBox(a) == move && getBox(b) == move && getBox(c) == move) {
@@ -76,3 +96,5 @@ function startGame() {
         function clearBox(number) {
           document.getElementById("s" + number).innerText = "";
         }
+
+

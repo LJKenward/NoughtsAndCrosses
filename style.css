@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #333333;
   font-family: 'Montserrat', sans-serif;
@@ -9,8 +13,8 @@ body {
 }
 
 .Square {
-              width: 4em;
-              height: 4em;
+              width: 50px;
+              height: 50px;
               text-align: center;
               font-size: 2em;
               font-weight: bold;
@@ -61,15 +65,22 @@ body {
 
 /* These weren't doing anything that I could see. Need to work out how to resize table, at moment resizing indervidual squares. */
 
-/*.gameBoard {
+.gameBoard {
   width: 100% auto;
 }
 
 #tableBoard {
   width: 90% auto;
-}*/ 
+} 
 
-td { 
+#tableBoard { 
+  line-height: 1; 
+  border: 8px;
+  border-style: solid;
+  border-color: white;
+}
+
+.Square { 
   line-height: 1; 
   border: 4px;
   border-style: solid;
