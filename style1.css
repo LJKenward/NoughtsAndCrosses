@@ -1,0 +1,198 @@
+* {
+  text-align: center;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Pirata One', cursive;
+  color: white;
+}
+
+#logo {
+  max-width: 10em;
+  display: block;
+  /*margin: 0 auto;*/
+  padding: 30px;
+}
+
+#gameBoard {
+  width: 96%;
+/*  line-height: 1; 
+*/  border: 8px;
+  border-style: solid;
+  border-color: white;
+  background-color: red;
+}
+
+table {
+  width: 100%;
+  height: 50em;
+  margin: 0;
+  background-color: black;
+  border-radius: 3px;
+}
+
+td {
+  width: 33.3333%;
+  height:33.3333%;
+  color: white;
+  border-radius: 3px;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+.Square {
+              text-align: center;
+              font-size: 2em;
+              font-weight: bold;
+              font-family: Verdana;
+              line-height: 1; 
+              border: 4px;
+              border-style: solid;
+              border-color: white;
+           }
+
+#startAgain {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5% 25%;
+    border-radius: 3px;
+}
+
+div#message {
+  margin: 5% 25%;
+  font-size: 2em;
+  padding: 10px 5px;
+}
+
+.span-1, .span-2, .span-3 {
+  min-height:100px;
+  float: left;
+  /*margin-right: 3.333333%;*/ /* 20/660 = 0.0333333*/
+  width: 100%;
+}
+
+.span-1 {
+  background-color: black;
+  /*width: 30%; 180px / 600px = 0.3*/
+}
+
+.span-2 {
+  background-color: linen;
+  /*width: 63.333333%; 380 / 600 = 0.6333333*/
+}
+
+.span-3 {
+  background-color: grey;
+  /* width: 96.666666%; /* 580 / 600 = 0.9666666 */ 
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  padding: 20px;
+}
+
+ul {
+  list-style: none;
+  font-family: 'Indie Flower', cursive;
+}
+
+p {
+  padding: 10px;
+  font-family: 'Indie Flower', cursive;
+}
+
+@media (min-width: 40em) {
+  
+  body {
+    width: 80%;
+    /*background-color: tomato;*/
+    background-image: url("http://www.greendreamweddings.com/wp-content/uploads/2014/11/26-stained-parchment-background-sml.jpg");
+  }
+
+  .span-2 {
+  /*margin: 0 1.66666%;*/
+  width: 64.44444%;
+  }
+
+  .span-1 {
+    /*margin: 0 1.66666%;*/
+    width:32.2222%;
+}
+
+  .span-3 {
+    width: 96.66666%;
+  }
+
+  li { 
+    display: inline-block;
+    padding: 20px;
+
+  }
+  
+  p {
+    padding: 30px;
+  }  
+
+}
+/*
+@media (max-width: 800px) {
+  body {
+    background-color: pink;
+  }
+}
+
+*/
+
+
+
+
+
+/*
+
+
+
+  .tran1 { -o-transition: all 
+  1s;-moz-transition: all 
+  1s;-webkit-transition: all 1s; transition: 
+  all 1s;}
+  #nav { padding: 1ex; border: 2px solid #aaa; 
+  background-color: #ccf; margin: 1em; width: 
+  50%; }
+  #nav:hover { border: 2px solid #ddd; 
+  background-color: #eef; }
+  #nav h2 { display: inline; vertical-align: 
+  middle; }
+
+  .hide, .show { display: none; 
+  font-size: 80%; vertical-align: middle; }
+
+  @media all and (min-width:1px) { .hide, 
+  .show { display: inline; } }
+
+  a.hide:focus + .show { display: inline; }
+  .show { display: none; }
+  a.hide:focus { display: none; }
+
+  #menu { opacity: 1; height:3em; margin-top: 
+  0em; width: auto; margin-left: -1ex; 
+  overflow: hidden; }
+  a.hide:focus ~ #menu { opacity: 0; height: 0em; }
+
+  @media print {
+  .hide, .show { display: none; }
+  #nav { position: static; border: none; 
+  width: auto; }
+  #menu { width: auto; }
+  }*/
