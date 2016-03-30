@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Noughts and Crosses</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<head>
+		<meta charset="utf-8">
+		<title>Tic Tac Pho</title>
+		<link rel="stylesheet" type="text/css" href="assets/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='https://fonts.googleapis.com/css?family=Finger+Paint' rel='stylesheet' type='text/css'>
 
-</head>
-<body onload="startGame();">
-  <header>
-  </header>
-<div class="grid"> <!--100% wide-->
-  
-  <div class="col-1-3">
-     
-     <img id="logo" src="images/noughtsandcrosses.gif">
+		<!-- icons -->
+		<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+		<link rel="shortcut icon" href="favicon.ico">
+	</head>
+	<body onload="startGame();">
+		<div class="header">
+			<div class="container">
+				<h1 class="header-heading">Tic Tac Pho</h1>
+			</div>
+		</div>
+		<div class="nav-bar">
+			<div class="container">
+				<ul class="nav">
+					<li><a href="#">Nav item 1</a></li>
+					<li><a href="#">Nav item 2</a></li>
+					<li><a href="#">Nav item 3</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<div class="container">
+				<div class="main">
+					<h3>How to Pho</h3>
+					<hr>
+					<p>Get three Pho's in a row or three chopsticks in a row, vertical, horizontal, diagonal, and you win! All the Pho for life. </p>
+					<hr>
 
-     <div id="message">Messages Will Go Here</div>
-     
-  </div>
+					<!-- Responsive images 
+					<p><img class="img-responsive" src="http://images.food52.com/zsiP7YSEy5dAe0bs7SW17xLRR_Y=/33887135-c3c1-484b-be8c-a436f7e3b2ff--16623880972_58049cabc5_b.jpg" alt=""></p>
+					<hr>-->
 
-
-
-  <div class="col-2-3">
-     
-      <div class="gameBoard">
-        
-    
-    <table id="tableBoard">
+					<!-- Tables -->
+					<div id="message">Ready... Set.... Pho!</div>
+							<div id="gameBoard">
+    <table class="table table-striped">
       <tr>
         <td id="s1" class="Square" onclick="nextMove(this)"></td>
-        <td id="s2"  class="Square" onclick="nextMove(this)"></td>
+        <td id="s2" class="Square" onclick="nextMove(this)"></td>
         <td id="s3" class="Square" onclick="nextMove(this)"></td>
       </tr>
      <tr>
@@ -44,36 +58,16 @@
         <td id="s9" class="Square" onclick="nextMove(this)"></td>
       </tr>
     </table>
-    <a href ="" id="startAgain">Start Over</a>
-      </div>
   </div>
-</div>
-
-
-  <!-- <div class="col-2-3">
-     
-      <div class="gameBoard">
-        
-    
-    <div id="tableBoard">
-      <div>
-        <div id="s1" class="Square" onclick="nextMove(this)"></div>
-        <div id="s2"  class="Square" onclick="nextMove(this)"></div>
-        <div id="s3" class="Square" onclick="nextMove(this)"></div>
-        <div id="s4" class="Square" onclick="nextMove(this)"></div>
-        <div id="s5" class="Square" onclick="nextMove(this)"></div>
-        <div id="s6" class="Square" onclick="nextMove(this)"></div>
-        <div id="s7" class="Square" onclick="nextMove(this)"></div>
-        <div id="s8" class="Square" onclick="nextMove(this)"></div>
-        <div id="s9" class="Square" onclick="nextMove(this)"></div>
-      </div>
-    </div>
-    <a href ="" id="startAgain">Start Over</a>
-      </div>
-  </div>
-</div> -->
-
-
-<script type="text/javascript" src="app.js"></script>
-</body>
+					<p><a href="" id="startAgain" class="btn">Start Over</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				&copy; Copyright 2016
+			</div>
+		</div>
+		<script type="text/javascript" src="assets/app.js"></script>
+	</body>
 </html>
