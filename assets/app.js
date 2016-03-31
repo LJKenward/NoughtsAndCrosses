@@ -1,5 +1,3 @@
-console.log('testicles');
-
 function startGame() {
 
     for (var i = 1; i <= 9; i = i + 1) {
