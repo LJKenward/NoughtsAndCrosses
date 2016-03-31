@@ -19,10 +19,6 @@ div#message {
   width: 100%;
 }
 
-/* -----------------------
-Base styles
-------------------------*/
-
 body
 {
 	margin: 0;
@@ -32,7 +28,7 @@ body
 	font: 1em/1.2 "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6
+h1,h3
 {
 	margin: 0 0 .5em;
 	font-weight: 500;
@@ -40,24 +36,13 @@ h1,h2,h3,h4,h5,h6
 	font-family: 'Finger Paint', cursive;
 }
 
-h1 { font-size: 2.25em; } /* 36px */
-h2 { font-size: 1.75em; } /* 28px */
-h3 { font-size: 1.375em; } /* 22px */
-h4 { font-size: 1.125em; } /* 18px */
-h5 { font-size: 1em; } /* 16px */
-h6 { font-size: .875em; } /* 14px */
+h1 { font-size: 2.25em; }
+h3 { font-size: 1.375em; }
 
 p
 {
 	margin: 0 0 1.5em;
 	line-height: 1.5;
-}
-
-blockquote
-{
-	padding: 1em 2em;
-	margin: 0 0 2em;
-	border-left: 5px solid #eee;
 }
 
 hr
@@ -75,28 +60,18 @@ table
 	border-spacing: 0;
 	border-collapse: collapse;
 	border: 1px solid #ddd;
-	height: 36em;
+	height: 35em;
 }
 
 td
 {
 	padding: .5em 1em;
-	vertical-align: top;
+	vertical-align: center;
 	text-align: left;
 	border: 1px solid #ddd;
 	width: 33.3333%;
   height: 33.3333%;
 }
-
-a:link { color: royalblue; }
-a:visited { color: purple; }
-a:focus { color: black; }
-a:hover { color: green; }
-a:active { color: red; }
-
-/* -----------------------
-Layout styles
-------------------------*/
 
 .container
 {
@@ -113,9 +88,9 @@ Layout styles
 }
 
 .header-heading { 
-	margin: 0;
+	margin: 15% auto;
 	color: #FFFFFF;
-	font-size: 3em;
+	font-size: 5em;
    text-shadow:
        4px 4px 0 #333,
      -1px -1px 0 #333,  
@@ -123,12 +98,6 @@ Layout styles
       -1px 1px 0 #333,
        2px 2px 0 #333;
 
-}
-
-.nav-bar
-{
-	background: #333;
-	padding: 0;
 }
 
 .content
@@ -144,60 +113,6 @@ Layout styles
 	padding: 1em 1.25em;
 	background-image: url("images/pho_recipe_footer.jpg");
 }
-
-/* -----------------------
-Nav
-------------------------*/
-
-.nav
-{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.nav li
-{
-	display: inline;
-	margin: 0;
-}
-
-.nav a
-{
-	display: block;
-	padding: .7em 1.25em;
-	color: #fff;
-	text-decoration: none;
-	border-bottom: 1px solid gray;
-}
-
-.nav a:link { color: white; }
-.nav a:visited { color: white; }
-
-.nav a:focus
-{
-	color: black;
-	background-color: white;
-}
-
-.nav a:hover
-{
-	color: white;
-	background-color: green;
-}
-
-.nav a:active
-{
-	color: white;
-	background-color: red;
-}
-
-/* -----------------------
-Single styles
-------------------------*/
-
-
-.img-responsive { max-width: 100%; }
 
 .btn
 {
@@ -224,12 +139,6 @@ Single styles
 	background-color: lightpink;
 }
 
-.btn:focus
-{
-	color: #fff !important;
-	background-color: black;
-}
-
 .btn:active
 {
 	color: #fff !important;
@@ -243,29 +152,89 @@ Single styles
 	margin-bottom: 20px;
 }
 
-.list-unstyled
-{
-	padding-left: 0;
-	list-style: none;
+/*
+Spinning Chopsticks; */
+
+:root {
+  --t-small-jump: -25px;
+  --t-large-jump: -50px;
 }
 
-.list-inline
-{
-	padding-left: 0;
-	margin-left: -5px;
-	list-style: none;
+.beer-wrap {
+  display: flex;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  animation: jump 1.5s ease infinite;
 }
 
-.list-inline > li
-{
-	display: inline-block;
-	padding-right: 5px;
-	padding-left: 5px;
+.beer {
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  animation: spin 1.5s linear infinite;
 }
 
-/* -----------------------
-Wide styles
-------------------------*/
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(var(--t-small-jump));
+  }
+  15% {
+    transform: translateY(var(--t-small-jump));
+  }
+  25% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(var(--t-small-jump));
+  }
+  40% {
+    transform: translateY(var(--t-small-jump));
+  }
+  50% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(var(--t-large-jump));
+  }
+  80% {
+    transform: translateY(var(--t-large-jump));
+  }
+  90% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  55% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 @media (min-width: 42em)
 {
@@ -286,4 +255,23 @@ Wide styles
 		padding: 0;
 		border-bottom: 0;
 	}
+	table
+	{
+		background-color: transparent;
+		border-spacing: 0;
+		border-collapse: collapse;
+		border: 1px solid #ddd;
+		height: 36em;
+	}
+
+	td
+	{
+		padding: .5em 1em;
+		vertical-align: top;
+		text-align: left;
+		border: 1px solid #ddd;
+		width: 33.3333%;
+	  height: 33.3333%;
+	}
+
 }
